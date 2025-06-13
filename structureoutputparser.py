@@ -9,7 +9,7 @@ from langchain.output_parsers import StructuredOutputParser, ResponseSchema
 
 load_dotenv()
 
-model = ChatOpenAI()
+model = ChatOpenAI(model_name="gpt-4", api_key=st.secrets['api_key'], temperature=0)
 st.title("5 Facts Generator")
 schema=[
     ResponseSchema(name='Fact_1',description='first fact about the topic'),
